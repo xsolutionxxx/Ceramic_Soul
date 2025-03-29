@@ -1,0 +1,93 @@
+@use "/src/sass/base/variables.scss" as v;
+
+.header {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__logo {
+        width: 100px;
+        height: 100px;
+    }
+    &__icons {
+        display: flex;
+        column-gap: 15px;
+        a {
+            display: block;
+            span {
+                display: block;
+                width: 20px;
+                height: 20px;
+                font-size: 18px;
+                color: v.$dark;
+            }
+        }
+    }
+    &__nav {
+        display: none;
+    }
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding-right: 35px;
+    span {
+        display: block;
+        width: 20px;
+        height: 1px;
+        background-color: v.$dark;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        &__nav {
+            display: block;
+            margin-top: 20px;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 15px 30px;
+                padding-left: 0;
+                li {
+                    list-style-type: none;
+                }
+            }
+        }
+        &__link {
+            font-style: normal;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: normal;
+            color: v.$dark;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+                color: v.$ui-ceramic;
+            }
+        }
+    }
+    .burger {
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .header {
+        &__logo {
+            width: 150px;
+            height: 151px;
+        }
+        &__nav {
+            margin-top: 36px;
+            ul {
+                gap: 30px 60px;
+            }
+        }
+    }
+}
