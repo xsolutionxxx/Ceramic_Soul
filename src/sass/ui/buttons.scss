@@ -23,6 +23,22 @@
     }
 }
 
+.btn-submit {
+    @include button;
+    width: 90px;
+    height: 40px;
+    border: 1px solid v.$light;
+    color: v.$light;
+    &:focus {
+        border: none;
+        outline: 1px solid v.$ceramic;
+    }
+    &:disabled {
+        color: v.$ui-disabled;
+        border: 1px solid v.$ui-disabled;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .btn-default {
         &:hover {
@@ -38,7 +54,8 @@
             color: v.$dark;
         }
     }
-    .btn-send {
+    .btn-send,
+    .btn-submit {
         &:hover {
             border: 1px solid v.$ceramic;
             color: v.$ceramic;

@@ -66,6 +66,9 @@
         margin-left: 4px;
         color: #a22dc6;
         text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &__checkbox {
         width: 15px;
