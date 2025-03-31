@@ -1,0 +1,100 @@
+@use "/src/sass/base/variables.scss" as v;
+
+.works {
+    padding-top: 60px;
+    &__slider {
+        margin-top: 40px;
+    }
+    .swiper-slide img {
+        width: 100%;
+    }
+    &__slider-nav {
+        display: none;
+    }
+    .swiper-pagination {
+        bottom: -45px;
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: v.$dark;
+        border-radius: 0;
+        opacity: 1;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: v.$ceramic;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .works {
+        .swiper-slide img {
+            display: block;
+            width: 400px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .works {
+        &__slider {
+            margin-top: 45px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .works {
+        &__wrapper {
+            position: relative;
+        }
+        &__slider {
+            margin: 80px 40px 0 40px;
+        }
+        .swiper-slide img {
+            width: 100%;
+            margin: 0;
+        }
+        .swiper-pagination {
+            bottom: -40px;
+        }
+        &__slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            font-size: 21px;
+            &::before {
+                width: auto;
+                margin: 0;
+            }
+        }
+        .icon-left-open {
+            left: 11px;
+        }
+        .icon-right-open {
+            right: 11px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .works {
+        padding-top: 100px;
+        &__slider {
+            margin: 80px 85px 0 85px;
+        }
+
+        .icon-left-open {
+            left: 35px;
+        }
+        .icon-right-open {
+            right: 35px;
+        }
+    }
+}
