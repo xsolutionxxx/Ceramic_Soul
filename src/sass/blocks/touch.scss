@@ -1,0 +1,166 @@
+@use "/src/sass/base/variables.scss" as v;
+
+.touch {
+    padding-top: 60px;
+    &__wrapper {
+        margin-top: 60px;
+    }
+    &__img {
+        display: none;
+    }
+    &__fieldset {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    &__label {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        color: v.$dark;
+        &:nth-child(2) {
+            margin-top: 8px;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 48px;
+        padding: 10px 15px;
+        background: #fff;
+        border: 1px solid #e2e1e5;
+        border-radius: 2px;
+        color: v.$dark;
+        &::placeholder {
+            font-size: 14px;
+            color: v.$ui-disabled;
+        }
+        &:focus {
+            border: none;
+            outline: 1px solid v.$dark;
+        }
+    }
+    &__textarea {
+        width: 100%;
+        height: 132px;
+        padding: 10px 15px;
+        background: #fff;
+        border: 1px solid #e2e1e5;
+        border-radius: 2px;
+        resize: none;
+        &::placeholder {
+            font-size: 14px;
+            color: v.$ui-disabled;
+        }
+        &:focus {
+            border: none;
+            outline: 1px solid v.$dark;
+        }
+    }
+    &__check-block {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    &__check-link {
+        margin-left: 4px;
+        color: #a22dc6;
+        text-decoration: none;
+    }
+    &__checkbox {
+        width: 15px;
+        height: 15px;
+        margin-right: 15px;
+    }
+    &__btn {
+        margin-top: 20px;
+    }
+    &__vase {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .touch {
+        &__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__label,
+        &__check-block,
+        &__input,
+        &__textarea {
+            width: 300px;
+        }
+        &__check-block {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .touch {
+        &__form {
+            position: relative;
+            display: block;
+            padding-left: 24px;
+        }
+        &__check-block {
+            justify-content: flex-start;
+        }
+        &__vase {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: block;
+            width: 85px;
+            height: 85px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .touch {
+        &__wrapper {
+            margin-top: 80px;
+        }
+        &__img {
+            display: block;
+            width: 550px;
+            height: 342px;
+            object-fit: cover;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+        }
+        &__form {
+            padding-left: 20px;
+        }
+        &__input,
+        &__textarea {
+            &:hover {
+                border: none;
+                outline: 1px solid v.$dark;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .touch {
+        padding-top: 100px;
+        &__img {
+            width: 100%;
+            height: 356px;
+        }
+        &__form {
+            padding-left: 143px;
+        }
+        &__fieldset {
+            display: flex;
+            column-gap: 45px;
+        }
+        &__vase {
+            right: 75px;
+        }
+    }
+}
