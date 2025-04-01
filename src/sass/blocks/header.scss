@@ -10,6 +10,7 @@
         padding: 50px 10px;
         background-color: v.$light;
         transition: transform 0.4s;
+        z-index: 1000;
         &_active {
             transform: translateX(100%);
         }
