@@ -8,16 +8,17 @@
 /* @use "/src/sass/pxtorem.scss" as *; as r -> r.rem() /// as * -> rem() */
 
 @use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/touch.scss";
+@use "/src/sass/blocks/footer.scss";
 
 @use "/src/sass/ui/titles.scss";
 @use "/src/sass/ui/buttons.scss";
 
 @use "/src/sass/blocks/promo.scss";
 @use "/src/sass/blocks/activities.scss";
-@use "/src/sass/blocks/touch.scss";
 @use "/src/sass/blocks/works.scss";
-@use "/src/sass/blocks/footer.scss";
-/* @use "/src/sass/blocks/footer.scss"; */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&family=Roboto:wght@100..900&display=swap");
 
 /* @use "/src/sass/blocks/catalog.scss";
 @use "/src/sass/blocks/blog.scss";

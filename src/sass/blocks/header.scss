@@ -1,6 +1,64 @@
 @use "/src/sass/base/variables.scss" as v;
 
 .header {
+    &__menu {
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        padding: 50px 10px;
+        background-color: v.$light;
+        transition: transform 0.4s;
+        &_active {
+            transform: translateX(100%);
+        }
+        &_close {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            span {
+                position: absolute;
+                top: 50%;
+                display: block;
+                width: 20px;
+                height: 1px;
+                background-color: v.$dark;
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        &-nav {
+            margin-top: 50px;
+            padding-left: 14px;
+            ul {
+                display: flex;
+                flex-direction: column;
+                row-gap: 25px;
+                padding-left: 0;
+                li {
+                    list-style-type: none;
+                }
+            }
+        }
+        &-link {
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: normal;
+            color: v.$dark;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:active {
+                color: v.$ceramic;
+            }
+        }
+    }
     &__top {
         display: flex;
         justify-content: space-between;
@@ -37,6 +95,7 @@
     flex-direction: column;
     row-gap: 8px;
     padding-right: 35px;
+    cursor: pointer;
     span {
         display: block;
         width: 20px;
@@ -47,6 +106,9 @@
 
 @media screen and (min-width: 768px) {
     .header {
+        &__menu {
+            display: none;
+        }
         &__nav {
             display: block;
             margin-top: 20px;
