@@ -39,6 +39,17 @@
     }
 }
 
+.btn-read {
+    @include button;
+    width: 145px;
+    height: 32px;
+    font-size: 14px;
+    &:focus {
+        border: none;
+        outline: 1px solid v.$ceramic;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .btn-default {
         &:hover {
@@ -55,7 +66,8 @@
         }
     }
     .btn-send,
-    .btn-submit {
+    .btn-submit,
+    .btn-read {
         &:hover {
             border: 1px solid v.$ceramic;
             color: v.$ceramic;

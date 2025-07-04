@@ -1,19 +1,25 @@
 {
-  "name": "ceramic-soul",
-  "module": "index.ts",
-  "devDependencies": {
-    "@types/bun": "latest",
-    "postcss": "^8.5.3",
-    "postcss-pxtorem": "^6.1.0",
-    "sass": "^1.86.0",
-    "vite": "^6.2.3"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "swiper": "^11.2.6"
-  }
+    "name": "ceramic-soul",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "module": "index.ts",
+    "devDependencies": {
+        "@types/bun": "latest",
+        "postcss": "^8.5.3",
+        "postcss-pxtorem": "^6.1.0",
+        "sass": "^1.86.0",
+        "vite": "^6.2.3"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "just-validate": "^4.3.0",
+        "swiper": "^11.2.6"
+    }
 }

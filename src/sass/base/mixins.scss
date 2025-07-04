@@ -23,3 +23,19 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
+@mixin angle-decoration {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: transparent;
+        border-top: 1px solid v.$dark;
+        border-left: 1px solid v.$dark;
+        z-index: -1;
+    }
+}

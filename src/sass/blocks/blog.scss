@@ -1,0 +1,88 @@
+@use "/src/sass/base/variables.scss" as v;
+@use "/src/sass/base/mixins.scss" as *;
+
+.blog {
+    padding-top: 50px;
+    &__title {
+        margin-top: 60px;
+    }
+    &__title-h3 {
+        text-align: left;
+        word-break: break-word;
+    }
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        gap: 40px;
+    }
+    &__card {
+        border: 1px solid v.$dark;
+        background: v.$light;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+    &__data {
+        &-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 25px 25px 0 25px;
+        }
+    }
+    &__img {
+        width: calc(100% + 2px);
+        max-inline-size: calc(100% + 2px);
+        transform: translateX(-1px) translateY(-1px);
+    }
+    &__text {
+        padding: 25px 25px 25px 25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .blog {
+        &__wrapper {
+            padding: 25px 25px 0 25px;
+            position: relative;
+            @include angle-decoration;
+        }
+        &__card {
+            border: none;
+        }
+        &__data {
+            &-column {
+                justify-content: space-between;
+                border: solid v.$dark;
+                border-width: 1px 1px 0 0;
+            }
+        }
+        &__img {
+            width: 100%;
+            height: 240px;
+            transform: translateX(0) translateY(0);
+            object-fit: cover;
+        }
+        &__text {
+            padding-top: 15px;
+            border: solid v.$dark;
+            border-width: 0 1px 1px 1px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .blog {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .blog {
+        padding-top: 40px;
+        &__title {
+            margin-top: 100px;
+        }
+    }
+}

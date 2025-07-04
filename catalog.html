@@ -126,11 +126,14 @@
                     <h2 class="footer__header">newsletter</h2>
                     <p class="footer__text footer__text_spaced">Keep up to date with news and promotions</p>
                     <form action="#" class="footer__form">
-                        <input class="footer__input" type="email" placeholder="Enter your e-mail" required>
+                        <input class="footer__input" type="email" id="footer__email" placeholder="Enter your e-mail"
+                            required>
+                        <div class="email-error-message"></div>
                         <label class="footer__check-block" for="checkbox">
-                            <input class="footer__checkbox" type="checkbox" id="checkbox" required>
+                            <input class="footer__checkbox" type="checkbox" id="footer__checkbox" required>
                             I agree with the <a class="footer__check-link" href="#">terms</a>
                         </label>
+                        <div class="check-error-message"></div>
                         <button class="btn-submit footer__form-btn">submit</button>
                     </form>
                 </div>
