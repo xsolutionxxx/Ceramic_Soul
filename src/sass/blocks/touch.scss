@@ -149,6 +149,9 @@
                 outline: 1px solid v.$dark;
             }
         }
+        &__vase {
+            animation: flipOn 3s;
+        }
     }
 }
 
